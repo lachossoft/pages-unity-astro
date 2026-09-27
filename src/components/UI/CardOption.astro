@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+    title: string,
+    text: string,
+    textFooter: string
+    iconName: string,
+}
+
+const {title, text, textFooter, iconName} = Astro.props;
+---
+
+<div class="md:w-[22rem] md:h-[19rem] flex flex-col p-6 bg-white border border-neutral-400 hover:border-primary/50 rounded-xl hover:shadow-lg group">
+    <div class="w-full">
+        <div class="w-12 h-12 flex items-center justify-center text-primary-900 group-hover:text-white bg-neutral-200 group-hover:bg-primary-900 rounded-xl">
+            <Icon name={iconName} size="1.5rem" class="font-black font-extrabold" />
+        </div>
+    </div>
+    <div class="h-32 my-4">
+        <span class="text-lg text-neutral-1000 font-bold">{title}</span>
+        <div class=" py-2 text-[.88rem] text-neutral-800">
+            <p>
+                {text}
+            </p>
+        </div>
+    </div>
+    <div class="mt-4 space-x-2 text-[0.8rem] text-primary-900 font-semibold">
+        <span>{textFooter}</span> <span>></span>
+    </div>
+</div>

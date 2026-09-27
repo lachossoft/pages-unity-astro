@@ -1,0 +1,33 @@
+---
+import Image from "astro/components/Image.astro";
+
+import CardIcon from "../UI/CardIcon.astro";
+
+import Logo from "../../assets/Logo.png"
+---
+
+<div class="w-full h-[64px] flex flex-row p-4 md:py-2 space-x-2 items-center justify-between md:items-center  md:justify-between bg-secondary-100 shadow-neutral-400 shadow-sm">
+    <div class="px-8">
+        <Image src={Logo} width={128} height="40" alt="Logo" />
+    </div>
+    <div class="hidden md:block md:flex md:flex-row md:space-x-4 md:justify-between">
+        <div class="">
+            <a href="#" class="h-10 p-2 rounded-md bg-secondary-100 hover:bg-[#eff4ff] text-neutral-800 font-bold hover:font-bold hover:text-primary">Módulo</a>
+        </div>
+        <div class="">
+            <a href="#" class="h-10 p-2 rounded-md bg-secondary-100 hover:bg-[#eff4ff] text-neutral-800 font-bold hover:font-bold hover:text-primary">Flujo SAT</a>
+        </div>
+        <div class="">
+            <a href="#" class="h-10 p-2 rounded-md bg-secondary-100 hover:bg-[#eff4ff] text-neutral-800 font-bold hover:font-bold hover:text-primary">Formatos CFDI</a>
+        </div>
+        <div class="">
+            <a href="#" class="h-10 p-2 rounded-md bg-secondary-100 hover:bg-[#eff4ff] text-neutral-800 font-bold hover:font-bold hover:text-primary">Precios</a>
+        </div>
+    </div>
+    <div class="flex flex-row space-x-2">
+        <a href="#" class="w-[10.05rem] h-10 p-2 rounded-md bg-primary hover:bg-primary-600 text-white font-bold">Solicitar Cotización</a>
+        <CardIcon icoName="help-circle" bg="bg-sencondary-100" bgHover="bg-[#eff4ff]" />
+        <CardIcon icoName="phone" bg="bg-sencondary-100" bgHover="bg-[#eff4ff]" />
+    </div>
+        
+</div>

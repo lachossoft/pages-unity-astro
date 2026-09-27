@@ -1,0 +1,62 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import BoxInfo from '../UI/BoxInfo.astro';
+import SectionInfo  from '../UI/Section.astro';
+import CardPicture from '../UI/CardPicture.astro';
+import CardInformation  from '../UI/CardInformation.astro';
+import CardOption  from '../UI/CardOption.astro';
+---
+<!-- Presentacion -->
+<div class="flex flex-col p-4 my-4 md:my-4 bg-[#f8f9ff] border-b-1 border-neutral-400">
+    <div class="w-80 h-9 flex flex-row items-center justify-between bg-[#eaddff] border border-[#eaddff] rounded-2xl m-auto space-x-2">
+        <span class=""><Icon name="dot" size="2rem" class="text-primary" /></span> 
+        <span class="text-[0.8rem] text-primary-1200 font-medium ">
+            CFDI 4.0 & Descarga Masiva Desatendida 
+        </span>
+        <span class="w-8 m-auto"><Icon name="arrow-right" size="1.7rem" /></span>
+    </div>
+    <div class="max-w-4xl flex flex-col mx-auto my-6 text-center">
+        <h1 class="px-8 text-3xl font-headline font-bold font-black">
+            <span class="text-black">Automatiza, descarga y simplifica tus </span><span class="text-primary">procesos fiscales y contables</span>
+        </h1>
+        <p class="my-6 mx-auto px-4 text-lg text-neutral-800">
+            Sincroniza rápida y automáticamente todos los XML del SAT sin intervención humana. Configura una vez y mantén tus comprobantes listos en carpetas y en el ADD de CONTPAQi® Contabilidad.
+        </p>
+    </div>
+    <div class="w-full flex flex-col md:flex-row items-center md:justify-center space-y-4 md:space-y-0 md:space-x-8">
+        <a href="#" class=" w-96 h-14 flex flex-row items-center justify-center px-8 py-3.5 md:py-2 space-x-2 bg-primary-900 hover:bg-primary-600 border rounded-md text-neutral-100 font-bold">
+            Solicitar Cotización Inmediata <Icon name="arrow-right" size="2.2rem" class="px-1" />
+        </a>
+        <a href="#" class=" w-96 h-14 flex flex-row items-center justify-center px-8 py-3.5 md:py2 space-x-2 bg-neutral-100 hover:bg-[#eff4ff] border rounded-md text-neutral-1000 font-bold">
+            <Icon name="play-circle" size="1.5rem" class="px-1" /> Descarga Ficha Informativa
+        </a>
+    </div>
+    <div class="flex flex-col md:flex-row mx-auto my-6 border-t border-t-neutral-300">
+        <BoxInfo title='+10 Millones' titleColor='text-neutral-1000' text='XMLs procesados con éxito' textColor='text-neutral-600' iconName='download' bgBox='bg-primary-200' iconColor='text-primary-900' />
+        <BoxInfo title='100% Desatendido' titleColor='text-neutral-1000' text='Operación continua 24/7' textColor='text-neutral-600' iconName='time-five' bgBox='bg-tertiary-200' iconColor='text-tertiary-800' />
+        <BoxInfo title='ADD & SQL Server' titleColor='text-neutral-1000' text='Conexión nativa CONTPAQi©' textColor='text-neutral-600' iconName='box-layout' bgBox='bg-neutral-200' iconColor='text-neutral-800' />
+    </div>
+</div>
+<!-- Sincronización -->
+<div class="md:w-[96rem] flex flex-col p-4 my-4 md:my-4 md:mx-auto items-center bg-white">
+    <SectionInfo textSection='ARQUITECTURA DESATENDIDA' title='Sincronización desatendida de incia fin' text='Mira cómo UNITY CFDI extrae de forma automática tus comprobantes del portal del SAT y los inyecta validados directamente en el Administrador de Documentos Digitales (ADD).' /> 
+    <CardPicture />
+    <div class="flex flex-col sm:flex-row md:flex-row sm:space-x-4 md:space-x-8 sm:mx-auto md:mx-auto">
+        <CardInformation number='01' iconName='cloud-sync' title="1. Descarga Masiva del SAT" text='Descarga miles de XML y formatos 32-D/CIF en minutos de forma ilimitada, operando en background mediante credenciales CIEC o e.firma sin interrupciones.' textFooter='Vigentes & Cancelados' color="text-primary-900" bgColor='bg-primary-300'/>
+        <CardInformation number='02' iconName='rule-folder' title="2. Validación y Organización" text='Clasificación automática por RFC, tipo de comprobante (Ingresos, Gastos, Nómina, Pagos REP), fechas fiscales y conciliación de estatus de cancelación.' textFooter='Estructura Fiscal CFDI 4.0' color="text-tertiary-900" bgColor='bg-tertiary-300'/>
+        <CardInformation number='03' iconName='database' title="3. Inyección directa al ADD & SQL" text='Compatible con grandes volúmenes de información en bases de datos CONTPAQi y SQL Server, sincronizando metadatos para auditorías instantáneas.' textFooter='Vigentes & Cancelados' color="text-primary-900" bgColor='bg-primary-300'/>
+    </div>
+</div>
+<!-- Potencia corporativa -->
+<div class="md:w-[96rem] flex flex-col p-4 my-16 md:my-4 md:mx-auto items-center bg-[#f8f9ff] border-b-1 border-neutral-400">
+    <SectionInfo textSection='POTENCIA CORPORATIVA' title='Módulos diseñados para contadores y departamentos fiscales' text='Elimina la fricción manual de descargar XML uno a uno y mantén un repositorio digital seguro, verificado y auditado en tiempo real.' /> 
+    <div class="sm:grid md:grid sm:grid-cols-3 sm:grid-rows-2 md:grid-cols-3 md:grid-rows-4 md:space-x-8  space-y-6">
+        <CardOption iconName='download-for-outline' title='Descarga Ilimitada de XML' text='Obtén comprobantes de ingresos, egresos, nómina ordinaria/extraordinaria y complementos de recepción de pagos (REP) sin topes ni límites mensuales.' textFooter='Soporta CFDI 3.3 y 4.0' />
+        <CardOption iconName='table-chart' title='Reporteador Avanzado y Programable' text='Generación dinámica en Excel y PDF con programación de envío automático por correo a directores, auditores o clientes según calendarios predefinidos.' textFooter='Exportación tabular nativa' />
+        <CardOption iconName='smart-toy' title='Modo 100% Desatendido' text='Servicio configurado en segundo plano que trabaja mientras duermes. Olvídate de contraseñas diarias, captchas o lentitud en horas pico del portal SAT.' textFooter='Ejecución como servicio Windows' />
+        <CardOption iconName='dns' title='Motor compatible con SQL Server' text='Optimizado para corporativos y firmas con millones de registros fiscales. Consultas relacionales de ultra-alta velocidad sin bloqueos ni caídas de servidor.' textFooter='Microsoft SQL Server Standard+' />
+        <CardOption iconName='verified-user' title='Formato 32-D y C.I.F.' text='Descarga periódica y automática de la Opinión del Cumplimiento de Obligaciones Fiscales (32-D) y la Cédula de Identificación Fiscal de todos tus RFCs asociados' textFooter='Cumplimiento tributario al día' />
+        <CardOption iconName='event-repeat' title='Detección de Estatus y Cancelaciones' text='Monitoreo continuo del webservice fiscal para identificar oportunamente CFDI cancelados por proveedores y evitar discrepancias o deducciones indebidas.' textFooter='Alerta temprana de inconsistencias' />
+    </div>
+</div>

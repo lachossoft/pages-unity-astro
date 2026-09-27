@@ -1,0 +1,35 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+    number: string,
+    title: string,
+    text: string,
+    textFooter: string,
+    iconName: string,
+    color: string,
+    bgColor: string,
+}
+
+const {number, title, text, textFooter,iconName, color, bgColor} = Astro.props;
+---
+
+<div class="md:w-[22rem] md:h-[35rem]flex flex-col mt-8 p-4 bg-[#f8f9ff] border border-neutral-300 rounded-xl hover:shadow-md ">
+    <div class="flex flex-row justify-between">
+        <div class=`w-10 h-10 flex flex-row my-auto items-center text-center justify-center rounded-md ${bgColor}`>
+            <span class=`text-xl ${color} font-bold`>{number}</span>
+        </div>
+        <div class="text-neutral-800">
+            <Icon name={iconName} size="1.5rem" />
+        </div>
+    </div>
+    <div class="py-2 border-b-1 border-b-neutral-400">
+        <span class="my-2 text-neutral-1000 text-xl font-bold">{title}</span>
+        <p class="mt-2 py-2 text-sm text-neutral-800 font-medium">
+            {text}
+        </p>
+    </div>
+    <div class=`flex flex-row items-center my-4 space-x-2 ${color}`>
+        <span><Icon name="check-circle" /></span> <span class="font-semibold">{textFooter}</span>
+    </div>
+</div>

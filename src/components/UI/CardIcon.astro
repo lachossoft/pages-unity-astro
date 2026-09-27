@@ -1,0 +1,17 @@
+---
+import { string } from 'astro:schema';
+import { Icon } from 'astro-icon/components'
+
+interface Props {
+    icoName: string,
+    bg: string,
+    bgHover: string,
+}
+
+const {icoName, bg, bgHover} = Astro.props;
+// const { icoName } = Astro.props;
+---
+
+<div class=`hidden md:block w-9 h-9 rounded-md ${bg} hover:${bgHover}`>
+    <Icon name={icoName} size=2rem class="m-auto text-neutral-800" />
+</div>
