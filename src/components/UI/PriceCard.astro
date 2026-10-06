@@ -1,0 +1,80 @@
+---
+interface Props {
+  title: string;
+  Price: string;
+  text: [];
+}
+
+const { title, Price, text } = Astro.props;
+---
+
+<div class="w-full flex flex-col mx-auto md:mx-4 px-4 py-8 bg-primary-1200 rounded-2xl border-primary-1200">
+  <div class="w-full flex flex-col mx-auto space-y-2 border-b-1 border-secondary-600">
+    <div class="flex mx-auto">
+      <span class="text-primary-400 font-bold ">{title}</span>
+    </div>
+    <div class="flex flex-row mx-auto justify-end">
+      <h2 class="flex text-white font-bold text-4xl">${Price}</h2>
+      <span class="flex mx-2 my-4 text-primary-400">
+        /Anual
+      </span> 
+    </div>
+  </div>
+  <div class="w-full h-[18rem] flex flex-col mx-auto mt-4 ">
+    <ul class="list-disc marker:text-primary-400 pl-5">
+      {
+        text.map((item) =>(
+          <li><span class="text-white">{item}</span></li>
+        ))
+      }
+      <!-- <li> 
+        <span class="text-white">
+          Descarga automática de XMl
+        </span> 
+      </li>
+      <li> 
+        <span class="text-white">
+          Organización de XML
+        </span> 
+      </li>
+      <li> 
+        <span class="text-white">
+          Conexión ADD
+        </span> 
+      </li>
+      <li> 
+        <span class="text-white">
+          Descarga CIF
+        </span> 
+      </li>
+      <li> 
+        <span class="text-white">
+          Descarga de formato 32-D
+        </span> 
+      </li>
+      <li> 
+        <span class="text-white">
+          Exportar reportes y dashboards
+        </span> 
+      </li>
+      <li> 
+        <span class="text-white">
+          Envíos automatizados CIF/32 D
+        </span> 
+      </li>
+      <li> 
+        <span class="text-white">
+          Reporteador programable
+        </span> 
+      </li> -->
+    </ul>
+  </div>
+  <div class="flex flex-col mt-8 space-y-2 itmex-center justify-center">
+    <a href="#" class=" w-96 h-10 flex items-center justify-center mx-auto px-8 py-3.5 md:py-2 space-x-2 bg-primary-600 hover:bg-primary-800 border border-primary-600 hover:border-primary-800 rounded-xl text-neutral-100 font-bold">
+        Comprar
+    </a>
+    <span class="flex mx-auto text-white text-sm">
+      *Precio + IVA 
+    </span>
+  </div>
+</div>

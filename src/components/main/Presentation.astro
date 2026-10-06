@@ -6,6 +6,7 @@ import SectionInfo  from '../UI/Section.astro';
 import CardPicture from '../UI/CardPicture.astro';
 import CardInformation  from '../UI/CardInformation.astro';
 import CardOption  from '../UI/CardOption.astro';
+import PriceCard  from '../UI/PriceCard.astro';
 ---
 <!-- Presentacion -->
 <div class="flex flex-col p-4 my-4 md:my-4 bg-[#f8f9ff] border-b-1 border-neutral-400">
@@ -60,3 +61,19 @@ import CardOption  from '../UI/CardOption.astro';
         <CardOption iconName='event-repeat' title='Detección de Estatus y Cancelaciones' text='Monitoreo continuo del webservice fiscal para identificar oportunamente CFDI cancelados por proveedores y evitar discrepancias o deducciones indebidas.' textFooter='Alerta temprana de inconsistencias' />
     </div>
 </div>
+<!-- Diseño Creación de formatos -->
+
+<!-- Planes de Inversión y Licencias Anuales -->
+ <div class="md:w-full flex flex-col p-4 my-16 md:my-4 md:mx-auto items-center bg-[#f8f9ff] border-b-1 border-neutral-400">
+    <SectionInfo textSection="TARIFAS TRANSPARENTES" title="Planes de Inversión y Licencias Anuales" text="Elige la opción que mejor se adapte al tamaño de tu cartera de clientes o volumen corporativo. Sin plazos forzosos." />
+    <div class="flex flex-col md:grid md:grid-col-2 space-y-8 md:items-center md:justify-center">
+        <PriceCard title="UNITY CFDI 1 CUENTA" Price="1,190" 
+        text={['Descarga automática de XML', 'Organización de XML', 'Conexión ADD','Descarga de CIF', 'Descarga de formato 32-D', 'Exporta reportes y dashboards', 'Envíos automatizados CIF/32 D', 'Reporteador programable']} />
+        <PriceCard title="UNITY CFDI 3 CUENTA" Price="1,790" 
+        text={['Descarga automática de XML', 'Organización de XML', 'Conexión ADD','Descarga de CIF', 'Descarga de formato 32-D', 'Exporta reportes y dashboards', 'Envíos automatizados CIF/32 D', 'Reporteador programable', 'Multi-empresa (Hasta 3 RFCs)']} />
+        <PriceCard title="UNITY CFDI CUENTAS ILIMITADAS" Price="5,990" 
+        text={['Descarga automática de XML', 'Organización de XML', 'Conexión ADD','Descarga de CIF', 'Descarga de formato 32-D', 'Exporta reportes y dashboards', 'Envíos automatizados CIF/32 D', 'Reporteador programable', 'RFCs y Despachos Ilimitados']} />
+        <PriceCard title="UNITY CFDI ENTERPLRISE" Price="16,590" 
+        text={['Descarga automática de XML', 'Organización de XML', 'Conexión ADD','Descarga de CIF', 'Descarga de formato 32-D', 'Exporta reportes y dashboards', 'Envíos automatizados CIF/32 D', 'Reporteador programable', 'Optimizado para grandes volúmenes de datos y consultas rápidas', 'Compatibilidad con SQL server (se requiere SQL Standard)']} />
+    </div>
+ </div>
